@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/upload_form_style.css')}}">
+      <title>uploadForm</title>
+  </head>
+
+  <body>
+    <h1>Upload Form</h1>
+     <form action="/api/upload_image"  enctype="multipart/form-data" method="post">
+       Key: <input type="text" name="key"  id="select_button" placeholder="Please input here"><br/>
+
+   	What is the image files to upload? (less than 5MB)<input type="file" name="file" id="unselect_button" value="No File"><br />
+
+   	<input type="submit" id="send_button" value="Send">
+  	<input type="reset" id="reset_button" value="Reset">
+    </form>
+
+  </body>
+</html>

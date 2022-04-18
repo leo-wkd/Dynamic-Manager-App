@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/viewstyle.css')}}">
+      <title>Image</title>
+  </head>
+
+  <body>
+    <form action="/" method="get">
+        <input type="submit" id="back_button" value="Back to homepage">
+    </form>
+
+    <h1>Image {{name}}</h1>
+    <img id="image" src = "data:image/jpg;base64,{{content}}" width="500" />
+  </body>
+</html>

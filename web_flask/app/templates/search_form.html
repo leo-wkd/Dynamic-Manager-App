@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/search_form_style.css')}}">
+      <title>searchForm</title>
+  </head>
+
+  <body>
+    <h1>Search Form</h1>
+    <form action="/api/search" method="post">Photo Name:
+      <input type="text" id="photo_name" name="key" placeholder="Please input here"><br/>
+      <input type="submit" id="submit_button" value="Send">
+      <input type="reset" id="reset_button" value="Reset">
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/config_form_style.css')}}">
+      <title>ConfigForm</title>
+  </head>
+
+  <body>
+    <h1>Config Cache</h1>
+
+    <form id="clear_form" action="/api/cache/clear" method="post">
+      <b>Clear all contents in mem-cache</b><br>
+      <input type="submit" id="clear_button" value="Clear">
+    </form>
+
+    <form id="config_form" action="/api/cache" method="post">
+        <label for="capacity"><b>Cache Capacity (between 1MB and 100MB):</b></label><br>
+        <input type="number" id="capacity" name="capacity" min="1" max="100" value="30"><br>
+
+        <b>The replacement policy of mem-cache:</b><br>
+        <input type="radio" id="random" name="replacement_policy" value="random">
+        <label for="random">Random Replacement</label><br>
+        <input type="radio" id="lru" name="replacement_policy" value="lru">
+        <label for="lru">Least Recently Used</label><br>
+   	    <input type="submit" id="send_button" value="Send">
+    </form>
+
+  </body>
+</html>

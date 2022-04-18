@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/mainstyle.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Homepage</title>
+    </head>
+
+    <body>
+        <h1>Homepage</h1>
+        <ul>
+            <li><a href="{{url_for('upload_image_form')}}">Image Upload</a></li>
+            <li><a href="{{url_for('search_image_form')}}">Image Search</a></li>
+            <li><a href="{{url_for('display_image_name')}}">Display All Image Name</a></li>
+        </ul>
+    </body>
+</html>
